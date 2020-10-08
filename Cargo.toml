@@ -1,0 +1,12 @@
+[package]
+name = "build-dep-failure-repro"
+version = "0.1.0"
+authors = ["Collin <chbaker0@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+arrayvec = { version = "0.5.1", default-features = false }
+
+[build-dependencies]
+# Commenting out this dependency makes the build succeed.
+nasm-rs = "0.2.0"
